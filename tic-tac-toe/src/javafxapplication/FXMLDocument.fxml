@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="811.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication.MyGUI">
+  <tabs>
+    <Tab text="Game">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="705.0" prefWidth="850.0">
+               <children>
+                  <Label fx:id="lblStatus" layoutX="87.0" layoutY="20.0" minHeight="16" minWidth="69">
+                     <font>
+                        <Font name="Courier New" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="names" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="654.0" layoutY="20.0" prefHeight="17.0" prefWidth="135.0" text="Registered players" />
+                  <AnchorPane fx:id="gameLay" layoutX="19.0" layoutY="20.0" prefHeight="563.0" prefWidth="597.0" visible="false">
+                     <children>
+                        <Button fx:id="btn0" layoutX="69.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleBtn0" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn8" layoutX="291.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleBtn8" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn7" layoutX="180.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleBtn7" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn6" layoutX="69.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleBtn6" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn5" layoutX="291.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleBtn5" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn4" layoutX="180.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleBtn4" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn2" layoutX="291.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleBtn2" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn1" layoutX="180.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleBtn1" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn3" layoutX="69.0" layoutY="218.0" mnemonicParsing="false" onAction="#handleBtn3" prefHeight="112.0" prefWidth="111.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Button>
+                        <HBox alignment="CENTER_LEFT" layoutX="319.0" layoutY="21.0" prefHeight="29.0" prefWidth="278.0" spacing="10.0" visible="false">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="71.0" text="Prefer To ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton fx:id="radioX" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleRadioX" text="X">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tgSymbol" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="radioO" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleRadioO" prefHeight="17.0" prefWidth="70.0" text="O" toggleGroup="$tgSymbol">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </RadioButton>
+                              <Label text="with">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane fx:id="challenge" layoutX="402.0" layoutY="105.0" prefHeight="200.0" prefWidth="207.0" visible="false">
+                           <children>
+                              <Button fx:id="btnReject" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleBtnReject" text="REJECT" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnAccept" layoutX="124.0" layoutY="110.0" mnemonicParsing="false" onAction="#handelBtnAccept" text="ACCEPT" textFill="#009400">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="lblChallenge" alignment="CENTER" layoutX="13.0" layoutY="19.0" prefHeight="91.0" prefWidth="182.0" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="100.0" layoutX="100.0" startX="-100.0" />
+                              <Line endX="100.0" layoutX="100.0" layoutY="200.0" startX="-100.0" />
+                              <Line endX="100.0" layoutX="201.0" layoutY="100.0" rotate="90.0" startX="-100.0" />
+                              <Line endX="100.0" layoutX="1.0" layoutY="100.0" rotate="90.0" startX="-100.0" />
+                           </children>
+                        </Pane>
+                        <Label fx:id="lblInfoConnect" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="58.0" prefHeight="31.0" prefWidth="583.0">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnOk" layoutX="480.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleOkButton" text="OK" visible="false">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="471.0" layoutY="105.0" mnemonicParsing="false" onAction="#handelCancelButton" text="CANCEL" visible="false">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="btnLogOut" layoutX="16.0" layoutY="16.0" mnemonicParsing="false" onAction="#handelBtnLogOut" text="LogOUT" visible="false" />
+                  <ScrollPane layoutX="635.0" layoutY="44.0" prefHeight="560.0" prefWidth="173.0">
+                    <content>
+                        <VBox fx:id="box" layoutX="8.0" prefHeight="180.0" prefWidth="150.0" />
+                    </content>
+                  </ScrollPane>
+                  <AnchorPane fx:id="loginLay" layoutX="101.0" layoutY="108.0" prefHeight="200.0" prefWidth="392.0">
+                     <children>
+                        <Button fx:id="btnGuestLogin" layoutX="196.0" layoutY="55.0" onAction="#handleButtonGuestLogin" prefHeight="25.0" prefWidth="150.0" text="Play As A Guest" />
+                        <TextField fx:id="textFieldNameLogin" layoutX="39.0" layoutY="53.0" onKeyReleased="#textfieldNameOnKeyRelease" onMouseClicked="#handleLoginTextField" prefHeight="25.0" prefWidth="150.0" promptText="Enter your name" />
+                        <PasswordField fx:id="textFieldPasswordLogin" accessibleRole="PASSWORD_FIELD" layoutX="39.0" layoutY="93.0" onMouseClicked="#handlePasswordField" prefWidth="150.0" promptText="password" />
+                        <Button fx:id="btnLogin" disable="true" layoutX="196.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleButtonUserLogin" prefHeight="25.0" prefWidth="150.0" text="LogIN" />
+                        <Label fx:id="lblLoginIfo" layoutX="42.0" layoutY="134.0" prefHeight="17.0" prefWidth="144.0" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="leaderboard">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="leaderBoard" alignment="TOP_LEFT" layoutX="22.0" layoutY="86.0" prefHeight="447.0" prefWidth="768.0" text="Label">
+                     <font>
+                        <Font name="Courier New Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="207.0" layoutY="28.0" text="THE BEST PLAYERS">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
